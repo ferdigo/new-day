@@ -25,7 +25,15 @@ letter-spacing: 2px;
 
 ul li{
   display:inline-box; 
+}
 
+ul :first-child > a{
+color:red;
+text-transform:capitalize;
+}
+
+ul :first-child > a:hover{
+color:blue;
 }
 
 .navbar{

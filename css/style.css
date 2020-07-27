@@ -1,60 +1,168 @@
-body{
-height:100vh;
-margin: 0 auto;
-max-width: 800px;
-};
-
-.wrapper{
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;1,400&display=swap");
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 800px;
+    background-size: contain;
+    background-image: linear-gradient( 135.9deg, rgba(109, 25, 252, 1) 16.4%, rgba(125, 31, 165, 0.8) 56.1%), url(https://wallpaperplay.com/walls/full/b/b/7/148338.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size: 20px;
 }
+
+.wrapper {}
 
 ul {
-  list-style-type: none;
-  margin: 2rem 0;
-  padding: 0;
-
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-ul a{
-text-transform:uppercase;
-text-decoration:none;
-color: black;
-font-weight: 800;
-letter-spacing: 2px;
+ul a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
-ul li{
-  display:inline-box; 
+ul li {
+    display: inline-box;
 }
 
-ul :first-child > a{
-color:red;
-text-transform:capitalize;
+ul li:hover>a {}
+
+ul :first-child>a {
+    color: red;
+    text-transform: capitalize;
 }
 
-ul :first-child > a:hover{
-color:blue;
+ul :first-child>a:hover {
+    color: blue;
 }
 
-.navbar{
- display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 4rem;
+    align-items: center;
 }
 
-.btn{
-width: 160px;
-height:40px;
-text-align:center;
-background-color: #37a0b0;
-border-radius: 30px;
-border: 2px solid #0c82a6;
-line-height: 40px;
-display: inline-block;
-color:white;
-font-weight: 800;
-letter-spacing: 2px;
-text-transform:uppercase;
-text-decoration:none;
+.btn {
+    text-align: center;
+    border-radius: 30px;
+    line-height: 40px;
+    display: inline-block;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+    position: relative;
+}
+
+.btn:before,
+.btn:after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #cf2876;
+    border-radius: 20px;
+    top: -10px;
+    left: 50%;
+    z-index: 1;
+    margin: 0 0 0 -40px;
+    transition: all 0.8s ease 0s;
+}
+
+.btn:before {
+    animation: rotate 15s infinite linear;
+}
+
+.btn:after {
+    animation: rotate 25s infinite linear;
+}
+
+.btn__text {
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: all 1s ease 0s;
+    top: 0;
+    overflow: hidden;
+    color: #4f4585;
+}
+
+.btn__text:before,
+.btn__text:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #eee;
+    transition: all 0.8s ease 0s;
+}
+
+.btn__text:before {
+    left: 0;
+    z-index: 2;
+}
+
+.btn__text:after {
+    right: 0;
+}
+
+.btn__text span {
+    position: relative;
+    z-index: 2;
+}
+
+.btn:hover:before,
+.btn:hover:after {
+    left: 100%;
+    opacity: 0;
+}
+
+.btn:hover .btn__text {
+    top: -10px;
+    transition: all 0.5s ease 0.2s;
+    box-shadow: 0 5px 0 0 #b131fc;
+    color: #fff;
+}
+
+.btn:hover .btn__text:before {
+    width: 100%;
+}
+
+.btn:hover .btn__text:before,
+.btn:hover .btn__text:after {
+    background-color: #6d54e9;
+}
+
+.btn:active .btn__text {
+    top: -7px;
+    transition: all 0.1s ease 0s;
+    box-shadow: 0 2px 0 0 #b131fc;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+main {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
 }

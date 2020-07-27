@@ -42,3 +42,19 @@ color:blue;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.btn{
+width: 160px;
+height:40px;
+text-align:center;
+background-color: #37a0b0;
+border-radius: 30px;
+border: 2px solid #0c82a6;
+line-height: 40px;
+display: inline-block;
+color:white;
+font-weight: 800;
+letter-spacing: 2px;
+text-transform:uppercase;
+text-decoration:none;
+}

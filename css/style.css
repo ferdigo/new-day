@@ -74,7 +74,7 @@ ul :first-child>a:hover {
     width: 90px;
     height: 90px;
     border: 3px solid #ac6dff;
-    border-radius: 20px;
+    border-radius: 5px;
     top: -8px;
     left: 50%;
     z-index: 1;
@@ -85,7 +85,7 @@ ul :first-child>a:hover {
 .btn:after {
     content: "";
     position: absolute;
-    width: 120px;
+    width: 100px;
     height: 100px;
     border: 3px solid #cf2876;
     border-radius: 20px;

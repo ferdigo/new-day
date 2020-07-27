@@ -73,12 +73,12 @@ ul :first-child>a:hover {
     position: absolute;
     width: 90px;
     height: 90px;
-    border: 3px solid #ac6dff;
+    border: 3px solid #bd6dffd2;
     border-radius: 5px;
     top: -8px;
     left: 50%;
     z-index: 1;
-    margin: 0 0 0 -40px;
+    margin: 0 0 0 -47px;
     transition: all 0.8s ease 0s;
 }
 
@@ -87,12 +87,12 @@ ul :first-child>a:hover {
     position: absolute;
     width: 100px;
     height: 100px;
-    border: 3px solid #cf2876;
+    border: 3px solid rgba(252, 25, 184, 0.7);
     border-radius: 20px;
     top: -12px;
     left: 50%;
     z-index: 1;
-    margin: 0 0 0 -35px;
+    margin: 0 0 0 -50px;
     transition: all 1s ease 0s;
 }
 

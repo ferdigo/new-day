@@ -4,10 +4,10 @@ body {
     height: 100vh;
     margin: 0 auto;
     max-width: 800px;
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
     background-image: linear-gradient( 135.9deg, rgba(109, 25, 252, 1) 16.4%, rgba(125, 31, 165, 0.8) 56.1%), url(https://wallpaperplay.com/walls/full/b/b/7/148338.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
     font-size: 20px;
 }
 
@@ -17,18 +17,21 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 ul a {
     text-transform: uppercase;
     text-decoration: none;
     color: white;
-    font-weight: 800;
+    font-weight: 400;
     letter-spacing: 2px;
 }
 
 ul li {
     display: inline-box;
+    text-align: center;
+    width: 160px;
 }
 
 ul li:hover>a {}
@@ -39,7 +42,9 @@ ul :first-child>a {
 }
 
 ul :first-child>a:hover {
-    color: blue;
+    color: white;
+    text-transform: uppercase;
+    transition: ease 0.8s;
 }
 
 .navbar {
@@ -47,7 +52,7 @@ ul :first-child>a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 4rem;
+    height: 5rem;
     align-items: center;
 }
 
@@ -63,19 +68,32 @@ ul :first-child>a:hover {
     position: relative;
 }
 
-.btn:before,
-.btn:after {
+.btn:before {
     content: "";
     position: absolute;
-    width: 100px;
-    height: 100px;
-    border: 3px solid #cf2876;
+    width: 90px;
+    height: 90px;
+    border: 3px solid #ac6dff;
     border-radius: 20px;
-    top: -10px;
+    top: -8px;
     left: 50%;
     z-index: 1;
     margin: 0 0 0 -40px;
     transition: all 0.8s ease 0s;
+}
+
+.btn:after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    border: 3px solid #cf2876;
+    border-radius: 20px;
+    top: -12px;
+    left: 50%;
+    z-index: 1;
+    margin: 0 0 0 -35px;
+    transition: all 1s ease 0s;
 }
 
 .btn:before {
